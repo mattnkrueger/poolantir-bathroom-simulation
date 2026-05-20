@@ -5,7 +5,7 @@
 </p>
 
 ### Description
-Proof-of-Concept of simply adding a data layer to bathrooms to track usage, using ML to detect anomalies (due to shitty conditions).
+Proof-of-Concept of simply adding a data layer to bathrooms to track usage, using ML to detect restroom anomalies to optimize janitorial scheduling and improve restroom conditions.
 
 ---
 
@@ -49,9 +49,9 @@ Historical Data (30 minutes, 50 uses):
 - Urinal_3 used ~68%; 34 uses 
 
 Actual Data (30 minutes, 30 uses):
-- Urinal_1 used ~60%; 18 uses
-- Urinal_2 used ~33%; 10 uses
-- Urinal_3 used ~6.7%; 2 uses
+- Urinal_1 used ~60%; 18 uses (+30% change)
+- Urinal_2 used ~33%; 10 uses (+31% change)
+- Urinal_3 used ~6.7%; 2 uses (-61.3% change)
 
 An ML model with sufficient historical data would be able to infer an anomaly at Urinal_3, which is historically the 
 most used toilet, but currently the least used.
@@ -69,28 +69,33 @@ Ultimately, using the restroom is a sacred time and one that is not to be meddle
 walk into a restroom to find that they are all full.
 
 <p align="center">
-  <strong>System Architecture</strong><br />
   <img src="img/poster-arch.svg" alt="System architecture" width="900" />
+  <strong>System Architecture</strong><br />
 </p>
 
-<p align="center"><strong>Digital Twin and Simulation Model</strong></p>
+<div align="center">
+  <img src="img/poster-iso.png" width="48%" alt="Simulation Model" />
+  <p align="center"><strong>Simulation Model</strong></p>
+</div>
+
 <div align="center">
   <img src="img/digital-twin.png" width="48%" alt="Digital Twin" />
-  <img src="img/poster-iso.png" width="48%" alt="Simulation Model" />
+  <p align="center"><strong>Digital Twin</strong></p>
 </div>
 
 ## Project Demo
 
-<p align="center">
-  <video src="img/Poolanitr_Demo.mp4" controls width="730">
-    <a href="img/Poolanitr_Demo.mp4">Download demo video</a>
-  </video>
-</p>
+<video controls>
+  <source src="/img/Poolanitr_Demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Demo Video: [Poolantir_Demo.mp4](/img/Poolanitr_Demo.mp4)
 
 ## My Contributions
 I was in charge of the project planning and simulation of data. I did not touch any of the ML / Data layer.
 
-**Project Requirements:**
+**Project Contributions:**
 - 100% Idea, Project Architecture, and Planning
 - 100% CAD Modeling, 3D Printing, and Project Assembly
 - 100% Simulation Controller Software
@@ -114,8 +119,8 @@ of OpenMP to better simulated human behavior. A few all-nighters were pulled and
 
 Selected to present the project alongside Senior Design and other cool projects at the Uiowa ECE Modern Marvels event. 
 
-<p align="center"><strong>Presentation</strong></p>
-<div align="center">
-  <img src="img/group-photo.jpeg" width="48%" alt="Group photo at Modern Marvels" />
+<div align="center" style="display: flex; flex-direction: column; align-items: center;">
+  <img src="img/group-photo.jpeg" width="48%" alt="Group photo at Modern Marvels" style="margin-bottom: 16px;" />
   <img src="img/poster.jpg" width="48%" alt="Project poster" />
 </div>
+<p align="center"><strong>Project Showcase</strong></p>

@@ -1,7 +1,7 @@
 # poolantir-toilet-simulation
 
 <p align="center">
-  <img src="img/logo.svg" alt="Poolantir" width="480" />
+  <img src="img/logo.svg" alt="Poolantir" width="900" />
 </p>
 
 ### Description
@@ -72,7 +72,7 @@ walk into a restroom to find that they are all full.
 
 <p align="center">
   <img src="img/poster-arch.svg" alt="System architecture" width="600" />
-  <strong>System Architecture</strong><br />
+  <p align="center"><strong>Project Architecture</strong></p>
 </p>
 
 <div align="center">

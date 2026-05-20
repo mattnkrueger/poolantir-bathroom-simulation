@@ -75,7 +75,7 @@ walk into a restroom to find that they are all full.
   <p align="center"><strong>Project Architecture</strong></p>
 </p>
 
-<div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 32px;">
+<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
   <div style="display: flex; flex-direction: column; align-items: center;">
     <img src="img/poster-iso.png" alt="Simulation Model" width="400"/>
     <p align="center"><strong>Simulation Model</strong></p>

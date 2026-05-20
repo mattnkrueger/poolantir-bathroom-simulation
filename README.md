@@ -76,15 +76,10 @@ walk into a restroom to find that they are all full.
 </p>
 
 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
-  <div style="display: flex; flex-direction: column; align-items: center;">
     <img src="img/poster-iso.png" alt="Simulation Model" width="400"/>
-    <p align="center"><strong>Simulation Model</strong></p>
-  </div>
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="img/digital-twin.png" alt="Digital Twin" width="400"/>
-    <p align="center"><strong>Digital Twin</strong></p>
-  </div>
+    <img src="img/digital-twin.png" alt="Digital Twin" width="600"/>
 </div>
+  <p align="center"><strong>3D Model (Left) & Digital Twin (Right)</strong></p>
 
 
 ## Project Demo

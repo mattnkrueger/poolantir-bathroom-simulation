@@ -76,8 +76,8 @@ walk into a restroom to find that they are all full.
 </p>
 
 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
-    <img src="img/poster-iso.png" alt="Simulation Model" width="400"/>
-    <img src="img/digital-twin.png" alt="Digital Twin" width="600"/>
+    <img src="img/poster-iso.png" alt="Simulation Model" width="450"/>
+    <img src="img/digital-twin.png" alt="Digital Twin" width="550"/>
 </div>
   <p align="center"><strong>3D Model (Left) & Digital Twin (Right)</strong></p>
 

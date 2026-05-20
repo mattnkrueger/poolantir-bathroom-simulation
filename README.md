@@ -83,16 +83,14 @@ walk into a restroom to find that they are all full.
 
 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
     <img src="img/kicad.png" alt="pinout" height="300"/>
-    <img src="img/poster-tv.png" alt="activation" height="300"/>
-</div>
-  <p align="center"><strong>ESP32 Pinout (Left) & ToF Sensor Activation (Right)</strong></p>
-
-<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
     <img src="img/pcb.png" alt="pcb kicad" height="300"/>
     <img src="img/pcb-real.png" alt="pcb real" height="300"/>
     <img src="img/wiring.png" alt="wiring" height="300"/>
+    <img src="img/poster-tv.png" alt="activation" height="300"/>
+    <img src="img/behavioral-model.png" alt="behavioral model" height="300"/>
+    <img src="img/printed-model-front.png" alt="model front" height="300"/>
+    <img src="img/printed-model-top.png" alt="model top" height="300"/>
 </div>
-  <p align="center"><strong>PCB Design (Left), PCB Assembled (Middle), Wiring (Right)</strong></p>
 
 ## Project Demo
 

@@ -1,0 +1,171 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 40%;
+  min-width: 20rem;   
+  max-width: 35rem;   
+  padding: var(--space-5);
+  height: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.condition-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+.condition-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.condition-batch-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: var(--space-2);
+  margin-top: 0;
+  padding-top: var(--space-3);
+  flex-shrink: 0;
+}
+
+.condition-batch-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: var(--radius-button) !important;
+  text-transform: none !important;
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+  font-weight: var(--font-weight-medium) !important;
+  white-space: normal !important;
+  background-color: var(--color-gray-100) !important;
+  color: var(--color-gray-700) !important;
+  border-color: var(--color-gray-500) !important;
+  padding-block: var(--space-2) !important;
+  padding-inline: var(--space-1) !important;
+}
+
+.condition-batch-btn:hover {
+  background-color: var(--color-gray-200) !important;
+  border-color: var(--color-gray-600) !important;
+  color: var(--color-gray-700) !important;
+}
+
+.condition-batch-btn.Mui-focusVisible,
+.condition-batch-btn:focus-visible {
+  border-color: var(--color-gray-600) !important;
+}
+
+.condition-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.condition-label {
+  min-width: 5.75rem;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+  color: var(--color-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sidebar-square.sidebar-square--conditions {
+  padding: var(--space-6) var(--space-5) var(--space-4);
+}
+
+.sidebar-square--conditions .condition-select .MuiSelect-select {
+  padding-top: var(--space-2) !important;
+  padding-bottom: var(--space-2) !important;
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sidebar-square--conditions .condition-select .MuiSelect-icon {
+  font-size: 1.125rem;
+}
+
+.sidebar-square--conditions .condition-menu-item {
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+  min-height: auto !important;
+  padding-top: var(--space-2) !important;
+  padding-bottom: var(--space-2) !important;
+}
+
+.sidebar-square.sidebar-square--logs {
+  padding-top: var(--space-3);
+}
+
+.sim-logs {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--space-2);
+}
+
+.sim-logs-scroll {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  padding-bottom: var(--space-2);
+  box-sizing: border-box;
+}
+
+.sim-logs-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.sim-logs-icon-btn {
+  color: var(--color-gray-500) !important;
+}
+
+.sim-logs-icon-btn:hover {
+  color: var(--color-gray-600) !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.log-line {
+  margin: 0 0 var(--space-1) 0 !important;
+  font-size: clamp(0.8125rem, 0.55rem + 0.45vw, 1.125rem) !important;
+  line-height: 1.45 !important;
+  color: var(--color-text);
+}
+
+.log-line:last-child {
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 1800px) {
+  .sidebar {
+    max-width: 40rem;
+  }
+}

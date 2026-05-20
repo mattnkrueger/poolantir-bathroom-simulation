@@ -1,0 +1,56 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.urinal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.urinal-bowl {
+  width: 1.625rem;    
+  height: 6.125rem;    
+  background: var(--color-white);
+  border: var(--border-width-heavy) solid var(--color-border-dark);
+  border-radius: 1.5625rem 0 0 1.5625rem; 
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.urinal-base-wrapper {
+  position: relative;
+  margin-left: -0.4375rem; 
+}
+
+.urinal-base {
+  width: 2.6875rem;    
+  height: 7.125rem;    
+  background: var(--color-white);
+  border: var(--border-width-heavy) solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+}
+
+.urinal-node-id {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-border-dark);
+  z-index: 2;
+}
+
+.urinal--large {
+}
+
+.urinal--small {
+  transform: scale(0.4);
+  transform-origin: top left;
+}

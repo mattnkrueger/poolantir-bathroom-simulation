@@ -1,0 +1,209 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.bm-dialog-paper {
+  border-radius: 0 !important;
+  border: none;
+  background: var(--color-surface);
+}
+
+.bm-dialog-title {
+  position: relative;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: var(--font-size-lg) !important;
+  color: var(--color-text);
+  padding-right: 3rem !important;
+  padding-bottom: var(--space-3) !important;
+}
+
+.bm-dialog-close {
+  position: absolute !important;
+  top: 50%;
+  right: var(--space-4);
+  transform: translateY(-50%);
+  color: var(--color-text-muted) !important;
+}
+
+.bm-dialog-close:hover {
+  background: var(--color-surface-alt) !important;
+  color: var(--color-text) !important;
+}
+
+.bm-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-height: 0;
+  overflow: hidden !important;
+}
+
+.bm-dialog-controls {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-5);
+  align-items: center;
+  flex: 0 0 auto;
+  min-height: 0;
+  padding: var(--space-4) var(--space-5);
+  border: var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-alt);
+}
+
+.bm-control-reset {
+  flex-shrink: 0;
+  align-self: center;
+  text-transform: none !important;
+  font-size: var(--font-size-xs) !important;
+  font-weight: var(--font-weight-bold) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-muted) !important;
+  background: var(--color-white) !important;
+  padding: var(--space-2) var(--space-4) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.bm-control-reset:hover {
+  border-color: var(--color-border-strong) !important;
+  color: var(--color-text) !important;
+  background: var(--color-surface) !important;
+}
+
+.bm-controls-separator {
+  width: 1px;
+  align-self: stretch;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.bm-controls-toilets {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-3);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.bm-control-toilet {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.bm-control-user {
+  flex: 0 0 auto;
+  min-width: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.bm-control-label {
+  font-size: var(--font-size-xs) !important;
+  font-weight: var(--font-weight-bold) !important;
+  color: var(--color-text);
+  line-height: var(--line-height-tight) !important;
+  white-space: nowrap;
+}
+
+.bm-control-select .MuiSelect-select {
+  font-size: var(--font-size-xs) !important;
+  padding: var(--space-2) var(--space-3) !important;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm) !important;
+}
+
+.bm-dialog-cases-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-5);
+  align-items: stretch;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.bm-dialog-case-cell {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: var(--space-4);
+  border: var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.bm-dialog-case-cell .bm {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.bm-dialog-case-cell .bm-canvas {
+  flex: 1 1 auto;
+  aspect-ratio: auto;
+  min-height: 0;
+  height: 100%;
+}
+
+.bm-dialog-case-cell .bm--large .bm-user-icon .usage-icon-person {
+  font-size: 4.25rem !important;
+}
+
+.bm-dialog-case-cell .bm--large .bm-leaf-art-wrap {
+  width: 4.75rem;
+  height: 4.75rem;
+}
+
+.bm-dialog-case-cell .bm--large .bm-leaf-art .stall,
+.bm-dialog-case-cell .bm--large .bm-leaf-art .urinal {
+  transform: scale(0.60) !important;
+}
+
+.bm-dialog-case-cell .bm--large .bm-leaf-usage .anticipated-square {
+  width: 4.5rem;
+  min-width: 4.5rem;
+  max-width: 4.5rem;
+  height: 4.5rem;
+  min-height: 4.5rem;
+  max-height: 4.5rem;
+  aspect-ratio: 1;
+}
+
+.bm-dialog-case-cell .bm--large .bm-leaf-usage .anticipated-square-text {
+  font-size: var(--font-size-sm) !important;
+}
+
+.bm-dialog-case-cell .bm--large .bm-edge-label {
+  font-size: 32px;
+}
+
+.bm-dialog-case-cell .bm--large .bm-edge-label--small {
+  font-size: 26px;
+}
+
+@media (max-width: 1100px) {
+  .bm-dialog-controls {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .bm-dialog-content {
+    overflow-y: auto !important;
+  }
+  .bm-dialog-cases-row {
+    flex-direction: column;
+    flex: 0 0 auto;
+  }
+  .bm-dialog-case-cell .bm-canvas {
+    aspect-ratio: 1000 / 900;
+    height: auto;
+  }
+}

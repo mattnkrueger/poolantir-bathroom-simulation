@@ -1,0 +1,72 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+ 
+@import "../../styles.css";
+
+.sim-config {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  gap: var(--space-4);
+}
+
+.sim-config-preset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.sim-config-preset-select .MuiSelect-select {
+  padding: var(--space-2) var(--space-3) !important;
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+}
+
+.sim-config-preset-select .MuiSelect-icon {
+  font-size: 1.125rem;
+}
+
+.sim-config-toilet-menu .MuiMenuItem-root {
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+}
+
+.sim-config-params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: var(--space-4);
+  flex: 0 0 auto;
+}
+
+.sim-config-param-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sim-config-param-label {
+  font-size: var(--font-size-sim-control) !important;
+  font-weight: var(--font-weight-medium) !important;
+  line-height: 1.25 !important;
+  color: var(--color-text);
+  margin-bottom: var(--space-1) !important;
+}
+
+.sim-config-param-input .MuiOutlinedInput-root {
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+}
+
+.sim-config-param-input .MuiOutlinedInput-input {
+  padding: var(--space-2) var(--space-3) !important;
+}
+
+.sim-config-param-input .MuiInputAdornment-root {
+  font-size: var(--font-size-sim-control) !important;
+}

@@ -1,0 +1,6 @@
+flask
+flask-cors
+python-dotenv
+bleak
+requests
+google-auth

@@ -1,0 +1,92 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.header {
+  min-height: 2.75rem;
+  background-color: var(--color-surface-alt);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  padding: var(--space-2) var(--space-5);
+  box-sizing: border-box;
+}
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+  max-width: min(42vw, 100% - 20rem);
+  width: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.header-leading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  margin-right: auto;
+  z-index: 1;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  z-index: 1;
+}
+
+.header-action-btn {
+  border-radius: var(--radius-button) !important;
+  text-transform: none !important;
+  font-size: var(--font-size-sim-control) !important;
+  line-height: 1.25 !important;
+  font-weight: var(--font-weight-medium) !important;
+  white-space: nowrap !important;
+  background-color: var(--color-gray-100) !important;
+  color: var(--color-gray-700) !important;
+  border-color: var(--color-gray-500) !important;
+  padding-block: var(--space-2) !important;
+  padding-inline: var(--space-3) !important;
+}
+
+.header-action-btn:hover {
+  background-color: var(--color-gray-200) !important;
+  border-color: var(--color-gray-600) !important;
+  color: var(--color-gray-700) !important;
+}
+
+.header-action-btn.Mui-focusVisible,
+.header-action-btn:focus-visible {
+  border-color: var(--color-gray-600) !important;
+}
+
+.header-mode-group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: var(--space-2);
+  padding-left: var(--space-2);
+  border-left: var(--border-soft);
+}
+
+.header-mode-btn.header-mode-btn--active,
+.header-mode-btn.header-mode-btn--active:hover {
+  background-color: var(--color-gray-700) !important;
+  color: var(--color-gray-100) !important;
+  border-color: var(--color-gray-700) !important;
+}

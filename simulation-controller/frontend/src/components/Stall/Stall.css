@@ -1,0 +1,96 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.stall {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.stall-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.6875rem;     
+  height: 5.3125rem;    
+  margin-top: 0.40625rem; 
+}
+
+.stall-base {
+  width: 4.6875rem;
+  height: 5.3125rem;
+  background: var(--color-white);
+  border-width: var(--border-width-stall) 1rem var(--border-width-stall) var(--border-width-stall);
+  border-style: solid;
+  border-color: var(--color-border-dark);
+  border-radius: 1.875rem 0 0 1.875rem; 
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+}
+
+.stall-bowl {
+  width: 3.9rem;     
+  height: 3.9rem;
+  background: var(--color-white);
+  border-radius: 1.5625rem; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-49%, -50%);
+  z-index: 1;
+}
+
+.stall-node-id {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-border-dark);
+  z-index: 2;
+}
+
+.stall-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+.stall-handle {
+  width: 1.625rem;      
+  height: 0.40625rem;   
+  background: var(--color-gray-200);
+  margin-left: -0.1875rem; 
+  z-index: 1;
+}
+
+.stall-top {
+  width: 2.3125rem;     
+  height: 7.6875rem;    
+  background: var(--color-white);
+  border: var(--border-width-stall) solid var(--color-border-dark);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  margin-left: -0.4375rem; 
+}
+
+.stall--large {
+}
+
+.stall--small {
+  transform: scale(0.4);
+  transform-origin: top left;
+}
+.stall--small .stall-right {
+  height: auto;
+}

@@ -1,0 +1,72 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.assignment-preview-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.assignment-preview-overlay__svg {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.assignment-preview-overlay__line {
+  stroke: var(--color-text);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.assignment-preview-overlay__head {
+  fill: var(--color-text);
+  stroke: var(--color-text);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.assignment-preview-overlay__arrow {
+  opacity: 0.75;
+}
+
+.assignment-preview-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.375rem;
+  height: 4.375rem;
+  margin-left: -2.1875rem;
+  margin-top: -2.1875rem;
+  animation: assignment-preview-slide var(--preview-duration, 3000ms) linear
+    var(--preview-delay, 0ms) forwards;
+  will-change: transform;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+}
+
+.assignment-preview-marker__tile {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes assignment-preview-slide {
+  from {
+    transform: translate(var(--preview-start-x), var(--preview-start-y));
+  }
+  to {
+    transform: translate(var(--preview-end-x), var(--preview-end-y));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .assignment-preview-marker {
+    animation-duration: 0ms;
+  }
+}

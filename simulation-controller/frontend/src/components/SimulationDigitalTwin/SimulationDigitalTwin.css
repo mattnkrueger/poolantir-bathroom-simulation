@@ -1,0 +1,224 @@
+/* AI-ASSISTED
+ * Simulation Controller
+ * Matt Krueger, April 2026 
+ */
+
+@import "../../styles.css";
+
+.digital-twin {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  margin: var(--space-5) var(--space-5) var(--space-5) 0;
+  padding: var(--space-6);
+  gap: var(--space-8);
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.digital-twin-right {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.digital-twin-main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  gap: var(--space-6);
+}
+
+.digital-twin-main-row .elapsed-time-block {
+  flex: 0 0 12rem;
+  width: 12rem;
+  min-width: 0;
+  padding-top: var(--space-1);
+}
+
+.toilet-column {
+  --fixture-scale-x: 0.80;
+  --fixture-scale-y: 0.80;
+  --pct-square-max: clamp(5rem, 12vmin, 10rem);
+  --fixture-fill-size: 4.375rem;
+  --fixture-label-font: var(--font-size-md);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex: 1 1 0;
+  align-self: stretch;
+  min-height: 0;
+  gap: 0;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+
+.toilet-column-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 32.8125rem;
+  margin-left: auto;
+  flex: 1 1 0;
+  min-height: 0;
+  gap: 0;
+  --urinal-art-column: 23.75rem;
+  --urinal-sep-left-run: 12rem;
+  --urinal-sep-start: calc(var(--urinal-art-column) - var(--urinal-sep-left-run));
+  --sep-right-inset: 0rem;
+}
+
+.toilet-column-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.toilet-column-slot .stall-container,
+.toilet-column-slot .urinal-container {
+  flex: 1 1 0;
+  min-height: 0;
+  height: auto;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.toilet-column .stall-container,
+.toilet-column .urinal-container {
+  column-gap: var(--space-3);
+}
+
+.toilet-column .stall-container-left,
+.toilet-column .urinal-container-left {
+  width: auto;
+  flex: 1 1 auto;
+}
+
+.toilet-column .stall-container-body,
+.toilet-column .urinal-container-body {
+  gap: var(--space-3);
+  padding-right: var(--space-3);
+}
+
+.toilet-column-nonexistent {
+  flex: 1 1 0;
+  min-height: 0;
+  height: auto;
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+
+.toilet-column-disconnected {
+  flex: 1 1 0;
+  min-height: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+
+.toilet-column-disconnected__label {
+  font-weight: var(--font-weight-bold) !important;
+  font-size: clamp(1rem, 2.4vmin, 1.75rem) !important;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.toilet-column .usage-square {
+  align-self: center;
+  height: min(100%, var(--pct-square-max, 10rem));
+  width: auto;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  max-height: var(--pct-square-max, 10rem);
+  margin-left: auto;
+}
+
+.toilet-column .usage-square-text {
+  font-size: clamp(1rem, 2.6vmin, 2.25rem) !important;
+}
+
+.toilet-column .stall-container-fill,
+.toilet-column .urinal-container-fill {
+  width: var(--fixture-fill-size);
+  height: var(--fixture-fill-size);
+}
+
+.toilet-column .usage-icon-number,
+.toilet-column .usage-icon-timer {
+  font-size: var(--fixture-label-font);
+}
+
+.toilet-column .stall,
+.toilet-column .urinal {
+  transform: scale(var(--fixture-scale-x), var(--fixture-scale-y));
+  transform-origin: center;
+}
+
+.toilet-column-separator {
+  height: 0.125rem;
+  flex-shrink: 0;
+  border: none;
+  margin: 0;
+  background-color: var(--color-divider);
+}
+
+.toilet-column-separator--stall {
+  width: 100%;
+  margin-right: 0;
+  align-self: stretch;
+}
+
+.toilet-column-separator--urinal {
+  width: calc(100% - var(--urinal-sep-start));
+  margin-left: var(--urinal-sep-start);
+  margin-right: 0;
+  align-self: flex-start;
+  box-sizing: border-box;
+}
+
+@media (max-height: 850px) {
+  .toilet-column {
+    --fixture-scale-x: 0.75;
+    --fixture-scale-y: 0.75;
+  }
+}
+
+@media (min-height: 1080px) {
+  .toilet-column {
+    --fixture-scale-x: 0.90;
+    --fixture-scale-y: 0.90;
+  }
+}
+
+@media (min-width: 1800px) {
+  .digital-twin {
+    padding: var(--space-8);
+    gap: var(--space-9);
+  }
+}

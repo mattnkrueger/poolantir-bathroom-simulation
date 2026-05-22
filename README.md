@@ -1,15 +1,22 @@
 # poolantir-toilet-simulation
 
 <p align="center">
-  <img src="img/logo.svg" alt="Poolantir" width="900" />
+  <img src="img/poster-arch.svg" alt="System architecture" width="600" />
+  <p align="center"><strong>Project Architecture</strong></p>
 </p>
+
+<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
+    <img src="img/poster-iso.png" alt="Simulation Model" width="425"/>
+    <img src="img/digital-twin.png" alt="Digital Twin" width="575"/>
+</div>
+  <p align="center"><strong>3D Model (Left) & Digital Twin (Right)</strong></p>
 
 ### Description
 Proof-of-Concept of simply adding a data layer to bathrooms to track usage, using ML to detect restroom anomalies to optimize janitorial scheduling and improve restroom conditions.
 
 ---
 
-### Project Tags
+### Repository Tags
 <div align="left">
   <img src="tags/uiowa.svg" width="123" alt="Uiowa" />
   <img src="tags/agentic.svg" width="129" alt="Agentic" />
@@ -69,17 +76,6 @@ Ultimately, using the restroom is a sacred time and one that is not to be meddle
 walk into a restroom to find that they are all full.
 
 ## Project Images
-
-<p align="center">
-  <img src="img/poster-arch.svg" alt="System architecture" width="600" />
-  <p align="center"><strong>Project Architecture</strong></p>
-</p>
-
-<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
-    <img src="img/poster-iso.png" alt="Simulation Model" width="425"/>
-    <img src="img/digital-twin.png" alt="Digital Twin" width="575"/>
-</div>
-  <p align="center"><strong>3D Model (Left) & Digital Twin (Right)</strong></p>
 
 <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px;">
     <img src="img/kicad.png" alt="pinout" height="300"/>
